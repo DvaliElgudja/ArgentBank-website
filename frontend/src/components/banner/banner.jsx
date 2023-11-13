@@ -1,15 +1,14 @@
-function Account({title, amount, description, children}) {
+function Banner () {
     return (
-        <section className="account">
-          <div className="account-content-wrapper">
-            <h3 className="account-title">{title}</h3>
-            <p className="account-amount">{amount}</p>
-            <p className="account-amount-description">{description}</p>
-          </div>
-        <div className="account-content-wrapper cta">
-          {children}
-        </div>
-      </section>
+        <div className="hero">
+        <section className="hero-content">
+          <h2 className="sr-only">Promoted Content</h2>
+          <p className="subtitle">No fees.</p>
+          <p className="subtitle">No minimum deposit.</p>
+          <p className="subtitle">High interest rates.</p>
+          <p className="text">Open a savings account with Argent Bank today!</p>
+        </section>
+      </div>
     )
 }
-export default Account
+export default Banner

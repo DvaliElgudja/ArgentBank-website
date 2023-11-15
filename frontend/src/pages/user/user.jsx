@@ -13,7 +13,10 @@ import { useNavigate } from 'react-router-dom';
 
 function User() {
     const token = useSelector(state => state.userAuth.token)
-    const profile = useSelector((state) => state.profile)
+    const profile = useSelector((state) => 
+    {
+        console.log('state',state)
+        return state.profile}) 
     const dispatch = useDispatch()
     const navigate = useNavigate();
 
@@ -39,7 +42,7 @@ function User() {
         };
 
         fetchDataUser();
-    }, [token, navigate, dispatch]); // Added dispatch to the dependency array
+    }, [token, navigate, dispatch]); 
     
     return (
         <div className="main bg-dark">
